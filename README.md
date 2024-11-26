@@ -29,9 +29,9 @@ Melihat betapa pentingnya proses pemilihan lahan yang cocok untuk ditanami beber
 
 **Rubrik/Kriteria**:
 
-    ### Solution statements
-    - Menggunakan algoritma Supervised Machine Learning seperti K-Nearest Neighbors (KNN), Suport Vector Machine dan Logistic Regression untuk membangun model klasifikasi.
-    - Mengadaptasi pendekatan sistem rekomendasi berbasis collaborative filtering. Petani atau wilayah yang memiliki kondisi tanah dan lingkungan serupa dianalisis untuk memberikan rekomendasi tanaman berdasarkan data historis.
+Solution statements
+- Menggunakan algoritma Supervised Machine Learning seperti K-Nearest Neighbors (KNN), Suport Vector Machine dan Logistic Regression untuk membangun model klasifikasi.
+- Mengadaptasi pendekatan sistem rekomendasi berbasis collaborative filtering. Petani atau wilayah yang memiliki kondisi tanah dan lingkungan serupa dianalisis untuk memberikan rekomendasi tanaman berdasarkan data historis.
 
 ## Data Understanding
 Pada Agricultural Crop Dataset memiliki 1697 baris dan 8 kolom, kolom-kolomnya dirancang untuk memberikan informasi yang relevan tentang kondisi tanah, lingkungan, dan rekomendasi tanaman yang cocok. Dataset bisa diakses pada link berikut : [KAGGLE Agricultural Crop Dataset](https://www.kaggle.com/datasets/agriinnovate/agricultural-crop-dataset/data).
