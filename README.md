@@ -1,4 +1,4 @@
-![header](DBS_Proyek/img/petani.jpg)
+![header](../DBS_Proyek/img/petani.jpg)
 # Laporan Proyek Machine Learning - M.TOFIK HIDAYAT
 
 ## Project Overview
@@ -86,7 +86,7 @@ Tahap ini yaitu memilih beberapa algoritma machine learning yang mengklasifikasi
 ## Evaluation
 Pada bagian ini, peneliti menggunakan metrik F1-Score untuk mengevaluasi performa model. F1-Score dipilih karena memberikan keseimbangan antara Precision dan Recall, yang sangat penting dalam konteks sistem rekomendasi tanaman. Sistem harus tidak hanya akurat dalam memilih tanaman yang relevan (Precision) tetapi juga mampu merekomendasikan semua tanaman yang cocok dengan kondisi tertentu (Recall).
 
-![evaluation](DBS_Proyek/img/Cv_matrik.png)
+![evaluation](../DBS_Proyek/img/Cv_matrik.png)
 
 **Rubrik/Kriteria**: 
 - Dalam sistem rekomendasi, penting untuk meminimalkan False Positives (rekomendasi yang tidak cocok) dan False Negatives (tanaman yang cocok tetapi tidak direkomendasikan).
