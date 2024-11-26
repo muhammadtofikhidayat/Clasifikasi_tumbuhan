@@ -1,4 +1,4 @@
-![header](img/petani.jpg)
+![header](img/petani_new.jpg)
 # Laporan Proyek Machine Learning - M.TOFIK HIDAYAT
 
 ## Project Overview
