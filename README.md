@@ -1,4 +1,4 @@
-![header](../DBS_Proyek/img/petani.jpg)
+![header](img/petani.jpg)
 # Laporan Proyek Machine Learning - M.TOFIK HIDAYAT
 
 ## Project Overview
@@ -19,21 +19,18 @@ Melihat betapa pentingnya proses pemilihan lahan yang cocok untuk ditanami beber
 
 ### Problem Statements
 
-Menjelaskan pernyataan masalah:
 - Bagaimana model prediksi berbasis data dapat membantu memberikan rekomendasi tanaman yang paling cocok?
 - Bagaimana data ini dapat digunakan untuk memberikan panduan penggunaan sumber daya secara efisien?
 
 ### Goals
 
-Menjelaskan tujuan proyek yang menjawab pernyataan masalah:
 - Mengembangkan model prediksi berbasis data yang memberikan rekomendasi tanaman terbaik berdasarkan kondisi tanah (N, P, K, pH) dan faktor lingkungan (suhu, kelembapan, curah hujan).
 - Menyediakan panduan berbasis data untuk optimalisasi penggunaan pupuk dan air, berdasarkan analisis kandungan nutrisi tanah dan kebutuhan tanaman tertentu.
 
 **Rubrik/Kriteria**:
-- Menambahkan bagian “Solution Approach” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
 
     ### Solution statements
-    - Menggunakan algoritma Supervised Machine Learning seperti Random Forest, Gradient Boosting (XGBoost/LightGBM), atau Logistic Regression untuk membangun model klasifikasi.
+    - Menggunakan algoritma Supervised Machine Learning seperti K-Nearest Neighbors (KNN), Suport Vector Machine dan Logistic Regression untuk membangun model klasifikasi.
     - Mengadaptasi pendekatan sistem rekomendasi berbasis collaborative filtering. Petani atau wilayah yang memiliki kondisi tanah dan lingkungan serupa dianalisis untuk memberikan rekomendasi tanaman berdasarkan data historis.
 
 ## Data Understanding
@@ -57,36 +54,43 @@ Variabel-variabel pada Agricultural Crop Dataset adalah sebagai berikut:
 - Melakukan analisa terhadap kolom numerical dengan target.
 - Melakukan analisis korelasi dari semua kolom dengan target.
 ## Data Preparation
-Tahap ini mempersiapkan dan membersihkan dataset untuk memastikan data siap digunakan oleh model Machine Learning.
-
+Data Preparation adalah tahap penting dalam proses pengolahan data untuk memastikan data siap digunakan dalam analisis atau pembuatan model. Tahap ini melibatkan berbagai proses transformasi dan pembersihan data mentah agar menjadi lebih berkualitas, relevan, dan mudah diolah. Data preparation sering dianggap sebagai fondasi keberhasilan dalam proyek data science atau machine learning.
 **Rubrik/Kriteria**: 
 - Memastikan tidak ada nilai yang hilang (missing values).
 - Menstandarkan skala data, seperti suhu, kelembapan, dan kandungan nutrisi tanah, menggunakan normalisasi atau standardisasi.
 - Menangani data yang outlier untuk meningkatkan akurasi prediksi.
 ## Modeling
-Tahap ini yaitu memilih beberapa algoritma machine learning yang mengklasifikasikan beberapa macam tumbuhan.
-
+Tahap Modeling adalah proses dalam machine learning di mana model atau algoritma dilatih untuk membuat prediksi atau keputusan berdasarkan data yang telah disiapkan. Tahap ini sangat penting karena model yang dibangun menentukan akurasi dan efektivitas solusi yang dihasilkan.
 **Rubrik/Kriteria**: 
-- Menggunakan model algoritma Random Forest, Xgboots dan Logistic Regression .
-- Kelebihan Random Forest : 
-    1.Dapat menangani data dengan hubungan non-linear
-    2.Tidak mudah overfitting karena menggunakan banyak pohon.
-    3.Memberikan feature importance untuk memahami kontribusi setiap fitur.
-- Kekurangan Random Forest : 
-    1.Membutuhkan banyak sumber daya komputasi.
-    2.Kurang efisien untuk dataset yang sangat besar.
+- Menggunakan model algoritma K-Nearest Neighbors (KNN), Xgboots dan Logistic Regression .
+- Kelebihan K-Nearest Neighbors (KNN) : 
+    * 1.Mudah diimplementasikan dan dimengerti karena hanya menggunakan kedekatan jarak untuk klasifikasi.
+    * 2.Tidak membuat asumsi tentang distribusi data, cocok untuk data yang kompleks atau tidak linier
+    * 3.Sangat efektif untuk dataset kecil yang memiliki pola jelas.
+- Kekurangan Nearest Neighbors (KNN) : 
+    * 1.Karena harus menghitung jarak untuk setiap titik data dalam dataset, performanya menurun pada dataset besar.
+    * 2.Akurasi menurun ketika jumlah fitur meningkat (curse of dimensionality).
+    * 3.Perlu normalisasi atau standarisasi data agar hasilnya akurat.
 - Kelebihan Logistic Regression:
-    1.Mudah diimplementasikan dan diinterpretasikan.
-    2.Cocok untuk data dengan jumlah fitur kecil.
-    3.Tidak membutuhkan banyak daya komputasi.
+    * 1.Mudah diimplementasikan dan diinterpretasikan.
+    * 2.Cocok untuk data dengan jumlah fitur kecil.
+    * 3.Tidak membutuhkan banyak daya komputasi.
 - Kekurangan Logistic Regression:
-    1.Tidak cocok untuk data dengan hubungan non-linear.
-    2.Membutuhkan preprocessing yang baik agar hasil akurat.
+    * 1.Tidak cocok untuk data dengan hubungan non-linear.
+    * 2.Membutuhkan preprocessing yang baik agar hasil akurat.
+- Kelebihan Support Vector Machines (SVM):
+    * 1.Kernel trick memungkinkan SVM menangani data yang tidak linier dengan memetakannya ke dimensi yang lebih tinggi.
+    * 2.SVM dapat bekerja dengan baik pada dataset dengan banyak fitur.
+    * 3.Cocok untuk klasifikasi biner atau multi-kelas, dan mampu memberikan solusi optimal pada masalah klasifikasi yang kompleks.
+- Kekurangan Support Vector Machines (SVM):
+    * 1.Pemilihan kernel dan penyesuaian parameter (seperti C dan gamma) sangat mempengaruhi kinerja model.
+    * 2.Kompleksitasnya membuat SVM kurang cocok untuk dataset besar.
+    * 3.Hasil model sulit untuk dijelaskan karena bekerja pada dimensi yang lebih tinggi.
 
 ## Evaluation
 Pada bagian ini, peneliti menggunakan metrik F1-Score untuk mengevaluasi performa model. F1-Score dipilih karena memberikan keseimbangan antara Precision dan Recall, yang sangat penting dalam konteks sistem rekomendasi tanaman. Sistem harus tidak hanya akurat dalam memilih tanaman yang relevan (Precision) tetapi juga mampu merekomendasikan semua tanaman yang cocok dengan kondisi tertentu (Recall).
 
-![evaluation](../DBS_Proyek/img/Cv_matrik.png)
+![evaluation](img/Cv_matrik.png)
 
 **Rubrik/Kriteria**: 
 - Dalam sistem rekomendasi, penting untuk meminimalkan False Positives (rekomendasi yang tidak cocok) dan False Negatives (tanaman yang cocok tetapi tidak direkomendasikan).
